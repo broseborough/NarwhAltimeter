@@ -12,17 +12,17 @@
 #include <Adafruit_GPS.h>
 #include <SoftwareSerial.h>
 
-class NWA_GPS
-{
+#define RX	2
+#define TX	3
+
+class NWA_GPS {
 	public:
 		NWA_GPS();
-		Adafruit_GPS* GPS;
-		void track(bool on);
 		void update();
+		Adafruit_GPS *gps;
 	private:
-		SoftwareSerial* _mySerial;
-		bool _usingInterrupt;
-		void _useInterrupt(bool v);
+		void _useInterrupt(boolean v);
+		boolean _usingInterrupt;
 };
 
 #endif

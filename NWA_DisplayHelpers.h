@@ -21,7 +21,10 @@ class NWA_Display
 		void updateAltitude(float altitude);
 		void updatePullIndicator();
 		void updateSpeed(int horizontal, int vertical);
-		void updateHeading();
+		void updateHeading(float heading);
+		void updateGPSSatellites(int count);
+		void updateGPSQuality(int quality);
+		void updateSDAvailability(bool available);
 	private:
 		Adafruit_ST7735* _tft;
 		uint16_t _indicationColor;

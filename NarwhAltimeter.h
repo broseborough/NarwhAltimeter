@@ -10,6 +10,7 @@
 #include "Arduino.h"
 #include "NWA_DisplayHelpers.h"
 #include "NWA_GPSHelpers.h"
+#include "NWA_LoggerHelpers.h"
 
 class NarwhAltimeter
 {
@@ -19,6 +20,8 @@ class NarwhAltimeter
 		void update();
 	private:
 		NWA_Display _display;
+		NWA_GPS _GPS;
+		NWA_Logger _logger;
 };
 
 #endif
