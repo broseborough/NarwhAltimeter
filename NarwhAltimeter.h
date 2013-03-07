@@ -11,6 +11,7 @@
 #include "NWA_DisplayHelpers.h"
 #include "NWA_GPSHelpers.h"
 #include "NWA_LoggerHelpers.h"
+#include "NWA_BarometerHelpers.h"
 
 class NarwhAltimeter
 {
@@ -22,6 +23,7 @@ class NarwhAltimeter
 		NWA_Display _display;
 		NWA_GPS _GPS;
 		NWA_Logger _logger;
+		NWA_Barometer _barometer;
 };
 
 #endif

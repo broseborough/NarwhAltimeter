@@ -19,11 +19,12 @@ void NarwhAltimeter::init()
 	_display.startUpImage(true);
 	//	Initialize Barometer
 	//	Initialize GPS
-	_GPS = NWA_GPS();
+	//_GPS = NWA_GPS();
 	//	Initialize Logger
-	_logger = NWA_Logger();
+	//_logger = NWA_Logger();
+	_barometer = NWA_Barometer();
 	_display.startUpImage(false);
-	_display.updateSDAvailability(_logger.initialized);
+	//_display.updateSDAvailability(_logger.initialized);
 }
 
 void NarwhAltimeter::update()
@@ -32,11 +33,11 @@ void NarwhAltimeter::update()
 	//	Update GPS
 	_GPS.update();
 	//	Update Display
-	_display.updateGPSSatellites(_GPS.gps->satellites);
-	_display.updateGPSQuality(_GPS.gps->fixquality);
-	_display.updateAltitude(12.5);
+	//_display.updateGPSSatellites(_GPS.gps->satellites);
+	//_display.updateGPSQuality(_GPS.gps->fixquality);
+	_display.updateAltitude(_barometer.altitude());
 	_display.updatePullIndicator();
-	_display.updateSpeed(_GPS.gps->speed, 120);
-	_display.updateHeading(_GPS.gps->angle);
+	//_display.updateSpeed(_GPS.gps->speed, 120);
+	//_display.updateHeading(_GPS.gps->angle);
 	//	Update Logger
 }

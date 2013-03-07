@@ -105,7 +105,7 @@ void NWA_Display::setIndicationColorByAltitude(float altitude)
 
 void NWA_Display::updateAltitude(float altitude)
 {
-	setIndicationColorByAltitude(5.0);
+	setIndicationColorByAltitude(altitude);
 	_tft->setCursor(64,20);
 	_tft->setTextSize(4);
 	_tft->setTextColor(_indicationColor, BACKGROUND_COLOR);
