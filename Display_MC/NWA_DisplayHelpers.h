@@ -4,6 +4,14 @@
 //	Authored by: Braden Roseborough
 //	License: CC BY-NC-ND 3.0 – http://creativecommons.org/licenses/by-nc-nd/3.0/
 //	Copyright 2013
+//
+//	Pins:
+//	SCL->D13
+//	SDA->D11
+//	RS/DC->D9
+//	RES->Reset
+//	CS->10
+//	
 */
 #ifndef NWA_Display_h
 #define NWA_Display_h

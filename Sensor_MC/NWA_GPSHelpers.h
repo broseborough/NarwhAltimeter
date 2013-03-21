@@ -4,6 +4,10 @@
 //	Authored by: Braden Roseborough
 //	License: CC BY-NC-ND 3.0 – http://creativecommons.org/licenses/by-nc-nd/3.0/
 //	Copyright 2013
+//
+//	Pins:
+//	TX->D3
+//	RX->D$
 */
 #ifndef NWA_GPS_h
 #define NWA_GPS_h

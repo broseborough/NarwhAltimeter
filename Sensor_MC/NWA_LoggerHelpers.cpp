@@ -13,7 +13,6 @@
 NWA_Logger::NWA_Logger()
 {
 	pinMode(SS, OUTPUT);
-	initialized = !initialized && SD.begin(CHIPSELECT) ? true : false;
 }
 
 void NWA_Logger::logGPSData(String data)

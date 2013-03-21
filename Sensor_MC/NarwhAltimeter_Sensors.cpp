@@ -5,29 +5,28 @@
 //	Copyright 2013
 */
 #include "Arduino.h"
-#include "NarwhAltimeter.h"
+#include "NarwhAltimeter_Sensors.h"
 
-NarwhAltimeter::NarwhAltimeter()
+NarwhAltimeter_Sensors::NarwhAltimeter_Sensors()
 {
 	
 }
 
-void NarwhAltimeter::init()
+void NarwhAltimeter_Sensors::init()
 {
 	//	Initialize Display
-	_display = NWA_Display();
-	_display.startUpImage(true);
+	//_display = NWA_Display();
+	//_display.startUpImage(true);
 	//	Initialize Barometer
 	//	Initialize GPS
-	//_GPS = NWA_GPS();
+	_GPS = NWA_GPS();
 	//	Initialize Logger
-	//_logger = NWA_Logger();
+	_logger = NWA_Logger();
 	_barometer = NWA_Barometer();
-	_display.startUpImage(false);
-	//_display.updateSDAvailability(_logger.initialized);
+	//_display.startUpImage(false);
 }
 
-void NarwhAltimeter::update()
+void NarwhAltimeter_Sensors::update()
 {
 	//	Update Barometer
 	//	Update GPS
@@ -35,9 +34,10 @@ void NarwhAltimeter::update()
 	//	Update Display
 	//_display.updateGPSSatellites(_GPS.gps->satellites);
 	//_display.updateGPSQuality(_GPS.gps->fixquality);
-	_display.updateAltitude(_barometer.altitude());
-	_display.updatePullIndicator();
-	//_display.updateSpeed(_GPS.gps->speed, 120);
+	//_display.updateAltitude(_barometer.altitude());
+	//_display.updatePullIndicator();
+	//_display.updateSpeed(_GPS.gps->speed, 000);
 	//_display.updateHeading(_GPS.gps->angle);
 	//	Update Logger
+	//_display.updateSDAvailability(_logger.initialized);
 }
