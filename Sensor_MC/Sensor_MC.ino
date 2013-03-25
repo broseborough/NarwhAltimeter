@@ -12,7 +12,6 @@ EasyTransfer ET;
 #include "NarwhAltimeter_Sensors.h"
 NarwhAltimeter_Sensors *NWA_Sensors; 
 
-//give a name to the group of data
 NWA_Message nwa_message;
 
 void setup(){
