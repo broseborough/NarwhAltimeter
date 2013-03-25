@@ -5,16 +5,10 @@
 #include <EasyTransfer.h>
 EasyTransfer ET; 
 
+#include "NWA_Message.h"
 #include "NarwhAltimeter_Display.h"
 NarwhAltimeter_Display *NWA_Display;
 
-struct NWA_Message{
-  boolean sd;
-  boolean gps_fix;
-  int gps_fix_quality;
-  int gps_satelites;
-  int altitude;
-};
 
 NWA_Message nwa_message;
 

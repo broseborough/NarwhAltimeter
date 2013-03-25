@@ -8,16 +8,9 @@
 #include <EasyTransfer.h>
 EasyTransfer ET;
 
+#include "NWA_Message.h"
 #include "NarwhAltimeter_Sensors.h"
 NarwhAltimeter_Sensors *NWA_Sensors; 
-
-struct NWA_Message{
-  boolean sd;
-  boolean gps_fix;
-  int gps_fix_quality;
-  int gps_satelites;
-  int altitude;
-};
 
 //give a name to the group of data
 NWA_Message nwa_message;
